@@ -1,0 +1,19 @@
+# This file is created by shitzuu
+
+[versions]
+shadow = "8.1.7"
+velocity-api = "3.3.0-SNAPSHOT"
+litecommands = "3.8.0"
+okaeri-configs = "5.0.3"
+
+[libraries]
+velocity-api = { module = "com.velocitypowered:velocity-api", version.ref = "velocity-api" }
+litecommands = { module = "dev.rollczi:litecommands-velocity", version.ref = "litecommands" }
+okaeri-configs-yaml-snakeyaml = { module = "eu.okaeri:okaeri-configs-yaml-snakeyaml", version.ref = "okaeri-configs" }
+okaeri-configs-serdes-commons = { module = "eu.okaeri:okaeri-configs-serdes-commons", version.ref = "okaeri-configs" }
+
+[plugins]
+shadow = { id = "io.github.goooler.shadow", version.ref = "shadow" }
+
+[bundles]
+okaeri-configs = ["okaeri-configs-yaml-snakeyaml", "okaeri-configs-serdes-commons"]

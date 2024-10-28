@@ -1,19 +1,23 @@
 plugins {
     id("java")
+    alias(libs.plugins.shadow)
 }
 
 group = "dev.piotrulla"
-version = "1.0-SNAPSHOT"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
+
+    maven("https://storehouse.okaeri.eu/repository/maven-public/")
+    maven("https://repo.papermc.io/repository/maven-public/")
+    maven("https://repo.eternalcode.pl/releases/")
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-}
+    compileOnly(libs.velocity.api)
+    annotationProcessor(libs.velocity.api)
 
-tasks.test {
-    useJUnitPlatform()
+    implementation(libs.bundles.okaeri.configs)
+    implementation(libs.litecommands)
 }
