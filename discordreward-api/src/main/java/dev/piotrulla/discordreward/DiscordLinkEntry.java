@@ -1,5 +1,6 @@
 package dev.piotrulla.discordreward;
 
+import java.time.Instant;
 import java.util.UUID;
 
 public interface DiscordLinkEntry {
@@ -9,5 +10,7 @@ public interface DiscordLinkEntry {
     long discordId();
 
     String minecraftName();
+
+    Instant linkedAt();
 
 }

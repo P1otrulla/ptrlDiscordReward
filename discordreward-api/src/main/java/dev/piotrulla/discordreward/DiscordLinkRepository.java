@@ -13,6 +13,8 @@ public interface DiscordLinkRepository {
 
     CompletableFuture<Long> getDiscordId(UUID uniqueId);
 
+    CompletableFuture<DiscordLinkEntry> getLink(UUID uniqueId);
+
     CompletableFuture<Void> link(long discordId, UUID uniqueId);
 
     CompletableFuture<Void> unlink(long discordId);

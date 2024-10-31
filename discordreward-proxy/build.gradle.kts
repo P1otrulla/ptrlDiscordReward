@@ -10,11 +10,18 @@ repositories {
     mavenCentral()
 
     maven("https://storehouse.okaeri.eu/repository/maven-public/")
+    maven("https://repo.stellardrift.ca/repository/snapshots/")
     maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://repo.eternalcode.pl/releases/")
 }
 
 dependencies {
+    compileOnly(project(":discordreward-api"))
+    implementation(project(":discordreward-core"))
+
+    implementation(libs.bundles.multification)
+    implementation(libs.minimessage)
+
     compileOnly(libs.velocity.api)
     annotationProcessor(libs.velocity.api)
 

@@ -5,15 +5,22 @@ shadow = "8.1.7"
 velocity-api = "3.3.0-SNAPSHOT"
 litecommands = "3.8.0"
 okaeri-configs = "5.0.3"
+multification = "1.1.4"
+adventure = "4.3.3"
+minimessage = "4.18.0-SNAPSHOT"
 
 [libraries]
 velocity-api = { module = "com.velocitypowered:velocity-api", version.ref = "velocity-api" }
 litecommands = { module = "dev.rollczi:litecommands-velocity", version.ref = "litecommands" }
 okaeri-configs-yaml-snakeyaml = { module = "eu.okaeri:okaeri-configs-yaml-snakeyaml", version.ref = "okaeri-configs" }
 okaeri-configs-serdes-commons = { module = "eu.okaeri:okaeri-configs-serdes-commons", version.ref = "okaeri-configs" }
+multification-core = { module = "com.eternalcode:multification-core", version.ref = "multification" }
+multification-okaeri = { module = "com.eternalcode:multification-okaeri", version.ref = "multification" }
+minimessage = { module = "net.kyori:adventure-text-minimessage", version.ref = "minimessage" }
 
 [plugins]
 shadow = { id = "io.github.goooler.shadow", version.ref = "shadow" }
 
 [bundles]
 okaeri-configs = ["okaeri-configs-yaml-snakeyaml", "okaeri-configs-serdes-commons"]
+multification = ["multification-core", "multification-okaeri"]
